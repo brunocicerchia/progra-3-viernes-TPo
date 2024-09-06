@@ -12,6 +12,9 @@ public class SumaRecursiva {
     public static void main(String[] args) {
         int n = 20; 
         System.out.println("La suma de los primeros " + n + " números es: " + suma(n));
+
+        int x = 352.25
+        System.out.println("La suma de los primeros " + n + " números es: " + suma(x));
     }
 }
 
