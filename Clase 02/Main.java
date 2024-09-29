@@ -1,4 +1,5 @@
-// Clase para representar un nodo del árbol
+// ACTIVIDAD 1, Consigna: Implementa el método getHeight en la clase BinarySearchTree para calcular la altura de un Árbol Binario de Búsqueda utilizando la técnica de "Dividir y Vencerás". 
+
 class TreeNode {
     int value;
     TreeNode left, right;
