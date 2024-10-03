@@ -17,3 +17,9 @@ funcion mayor(clientes, i, f)
     else
         devuelve der
     fin 
+
+
+Realizar el análisis de recurrencia por método inductivo (sin usar fórmulas
+matemáticas) para indicar la complejidad algorítmica.
+
+Este codigo tardara mas en ejercutarse dependiendo del tamaño de la lista, el tiempo es O(n)
