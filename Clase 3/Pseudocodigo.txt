@@ -1,10 +1,19 @@
-función contadorCambio(monedas, monto)
-    ordenar monedas de mayor a menor
-    para cada moneda en monedas:
-        mientras monto >= moneda:
-            monto = monto - moneda
-    si monto es 0:
-        devolver Verdadero
-    de lo contrario:
-        devolver Falso
-fin función
+funcion mayor(clientes)
+    devuelve mayor(clientes, 0, largo de lista clientes)
+
+funcion mayor(clientes, i, f)
+    si i es igual a f-1 
+        devuelve scoring de clientes en el índice i
+    
+    termina  si
+    
+    mitad = (i + f) / 2
+    
+    izq = mayor(clientes, i, mitad)          
+    der = mayor(clientes, mitad, f)          
+    
+    si izq > der entonces
+        devuelve izq
+    else
+        devuelve der
+    fin 
