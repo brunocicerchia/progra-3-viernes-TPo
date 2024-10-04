@@ -1,26 +1,8 @@
-import java.util.Arrays;
 public class Mochila {
     // Datos del problema
     static int[] pesos = {3, 4, 2};
     static int[] valores = {4, 5, 3};
     static int capacidad = 6;
-    // Fuerza Bruta: Genera todas las combinaciones posibles y selecciona la mejor
-    public static int fuerzaBrutaMochila(int i, int capacidadRestante) {
-        if (i == pesos.length || capacidadRestante == 0) {
-            return 0;
-        }
-        // Si el objeto no cabe en la mochila, lo omitimos
-        if (pesos[i] > capacidadRestante) {
-            return fuerzaBrutaMochila(i + 1, capacidadRestante);
-        }
-        // Caso 1: No incluir el objeto actual
-        int sinIncluir = fuerzaBrutaMochila(i + 1, capacidadRestante);
-        // Caso 2: Incluir el objeto actual
-        int conIncluir = valores[i] + fuerzaBrutaMochila(i + 1, capacidadRestante - pesos[i]);
-
-        // Devolvemos el máximo entre incluir y no incluir el objeto
-        return Math.max(sinIncluir, conIncluir);
-    }
     // Programación Dinámica: Usamos una tabla para almacenar los resultados de subproblemas
     public static int mochilaDinamica() {
         int n = pesos.length;
@@ -40,13 +22,8 @@ public class Mochila {
         return dp[n][capacidad]; // El valor máximo que cabe en la mochila
     }
     public static void main(String[] args) {
-        // Solución por Fuerza Bruta
-        int resultadoFuerzaBruta = fuerzaBrutaMochila(0, capacidad);
-        System.out.println("Valor máximo con Fuerza Bruta: " + resultadoFuerzaBruta);
-
         // Solución por Programación Dinámica
         int resultadoDinamico = mochilaDinamica();
         System.out.println("Valor máximo con Programación Dinámica: " + resultadoDinamico);
     }
 }
-
