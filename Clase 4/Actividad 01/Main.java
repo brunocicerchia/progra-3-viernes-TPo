@@ -22,7 +22,7 @@ public class Main {
             System.out.print("Ingrese el monto para el cambio: ");
             int monto = sc.nextInt();  // Leer el monto ingresado por el usuario
 
-            int[] monedas = {1, 5, 10, 25};
+            int[] monedas = {2, 5, 10, 25};
 
             if (contadorCambio(monedas, monto)) {
                 System.out.println("Es posible entregar el cambio exacto.");
