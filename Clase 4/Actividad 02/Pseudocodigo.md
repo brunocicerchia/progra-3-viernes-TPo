@@ -22,3 +22,5 @@ función principal
     imprimir el resultado de cantidadComprobantes
 fin función
 
+Ordenamiento: O(n log n) [Predominante]
+Algoritmo seleccion comprobantes: O(n)
